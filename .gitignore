@@ -1,0 +1,8 @@
+#intellij
+.idea
+
+#RESTler output
+/examples/**/Compile/
+/examples/**/Fuzz/
+/examples/**/RestlerLogs/
+/examples/**/Test/

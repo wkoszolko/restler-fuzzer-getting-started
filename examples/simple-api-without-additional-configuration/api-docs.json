@@ -1,0 +1,89 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Bored API",
+    "termsOfService": "",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "www.boredapi.com",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "activity",
+      "description": "Everything about your activities"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/activity": {
+      "get": {
+        "tags": [
+          "activity"
+        ],
+        "summary": "Find an activity by its key",
+        "description": "Returns a single activity",
+        "operationId": "getActivityById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Activity"
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Actity not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Activity": {
+      "type": "object",
+      "properties": {
+        "activity": {
+          "type": "string",
+          "description": "acitivity"
+        },
+        "accessibility": {
+          "type": "number",
+          "format": "float"
+        },
+        "type": {
+          "type": "string"
+        },
+        "participants": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "price": {
+          "type": "number"
+        },
+        "link": {
+          "type": "string"
+        },
+        "key": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

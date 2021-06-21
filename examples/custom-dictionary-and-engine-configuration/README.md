@@ -1,4 +1,5 @@
-#Test api with custom dictionary compile settings and engine configuration
+# Test api with custom dictionary compile settings and engine configuration
+
 This example demonstrates how to use a custom configuration in order to increase test coverage.
 When swagger API specification doesn't provide examples, a user has to provide additional configuration files with a dictionary.
 

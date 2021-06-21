@@ -1,6 +1,6 @@
 # RESTler Fuzzer Getting Started 
 
-The main goal of this repository is providing easy to start docker image with RESTler fuzzer.
+The main goal of this repository is providing easy to use docker image with RESTler fuzzer.
 
 This docker image should be used as black box solution and it could be used on your local machine or your CI/CD. 
 If you use Azure services or GitHub, I encourage you to take a look at [REST API Fuzz Testing (RAFT)](https://github.com/microsoft/rest-api-fuzz-testing). 

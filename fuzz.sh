@@ -1,5 +1,6 @@
 #!/bin/sh
 
+no_ssl=""
 api_spec=""
 compilation_config=""
 grammar_file=./Compile/grammar.py
@@ -23,6 +24,9 @@ while [ $# -gt 0 ]; do
     --settings=*)
       settings="${1#*=}"
       ;;
+    --no_ssl=true)
+      no_ssl="--no_ssl"
+      ;;
     *)
       echo "****************************"
       echo "*Error: Invalid argument:$1"
@@ -31,8 +35,8 @@ while [ $# -gt 0 ]; do
   esac
   shift
 done
-echo "Run RESTler with params: $compilation_config $api_spec --grammar_file $grammar_file --dictionary_file $dictionary_file --settings $settings"
+echo "Run RESTler with params: $compilation_config $api_spec --grammar_file $grammar_file --dictionary_file $dictionary_file --settings $settings $no_ssl"
 
 dotnet /RESTler/restler/Restler.dll compile $compilation_config $api_spec
-dotnet /RESTler/restler/Restler.dll test --grammar_file $grammar_file --dictionary_file $dictionary_file --settings $settings
-dotnet /RESTler/restler/Restler.dll fuzz --grammar_file $grammar_file --dictionary_file $dictionary_file --settings $settings
+dotnet /RESTler/restler/Restler.dll test --grammar_file $grammar_file --dictionary_file $dictionary_file --settings $settings $no_ssl
+dotnet /RESTler/restler/Restler.dll fuzz --grammar_file $grammar_file --dictionary_file $dictionary_file --settings $settings $no_ssl

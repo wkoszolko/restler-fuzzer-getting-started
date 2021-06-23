@@ -32,7 +32,7 @@ Docker image`restler-fuzzer-getting-started` supports parameters:
 | compilation_config | false | Compilation configuration. One parameter of (api_spec, compilation_config) has to be set. Both api_spec and compilation_config can not be set at the same time. |
 | dictionary_file | false | Path to dictionary file. |
 | settings | false | Path to engine configuration. |
-
+| no_ssl | false | Possible values: **true**/**false**. Disable SSL. If your API is expose over HTTP, you should use this flag. |
 ## Future improvements
 
 - push docker image to Docker Hub

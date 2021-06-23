@@ -1,4 +1,4 @@
-#Test api without additional fuzzer configuration
+# Test api without additional fuzzer configuration
 
 This example shows how to start using RESTler and test api based on OpenAPI/Swagger file.
 

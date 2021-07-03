@@ -12,17 +12,17 @@ In order to find more details about RESTler you should check out [RESTler github
 
 ## How to build docker image
 ```shell script
-docker build -t wkoszolko/restler-fuzzer-getting-started .
+docker build -t wkoszolkoo/restler-fuzzer-getting-started .
 ```
 ## How to use
 
 ```shell script
-docker run --rm -v $(pwd):/fuzzer:rw wkoszolko/restler-fuzzer-getting-started fuzz --api_spec=api-docs.json
+docker run --rm -v $(pwd):/fuzzer:rw wkoszolkoo/restler-fuzzer-getting-started fuzz --api_spec=api-docs.json
 ```
 
 Before you try to work with this docker image, I encourage you to take a look at provided examples:
-- [simple api](examples/simple-api-without-additional-configuration/README.md)
-- [dockerized api with custom configuration](examples/custom-dictionary-and-engine-configuration/README.md)
+- [simple api](examples/simple-api-without-additional-configuration)
+- [dockerized api with custom configuration](examples/custom-dictionary-and-engine-configuration)
 
 Docker image`restler-fuzzer-getting-started` supports parameters:
 
@@ -35,7 +35,6 @@ Docker image`restler-fuzzer-getting-started` supports parameters:
 | no_ssl | false | Possible values: **true**/**false**. Disable SSL. If your API is expose over HTTP, you should use this flag. |
 ## Future improvements
 
-- push docker image to Docker Hub
 - add CI/CD
 - add a new parameter `url` in order to override API url
 - add ability to run only `smoke-test` `fuzz` or `fuzz-lean`

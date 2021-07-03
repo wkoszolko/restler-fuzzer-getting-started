@@ -20,7 +20,7 @@ This config file ensures RESTler test only `api` paths
 docker run -p 9966:9966 --name petclinic-rest springcommunity/spring-petclinic-rest
 
 #run fuzzer with additional configuration
-docker run --rm --link petclinic-rest -v $(pwd):/fuzzer:rw wkoszolko/restler-fuzzer-getting-started fuzz --compilation_config=config.json --dictionary_file=./dict.json --settings=./engine_settings.json --no_ssl=true
+docker run --rm --link petclinic-rest -v $(pwd):/fuzzer:rw wkoszolkoo/restler-fuzzer-getting-started fuzz --compilation_config=config.json --dictionary_file=./dict.json --settings=./engine_settings.json --no_ssl=true
 
 #cleanup
 docker rm -f petclinic-rest
